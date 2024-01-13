@@ -29,6 +29,70 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
+.container {
+	height: 20px;
+	background-color: #CCC;
+	position: relative;
+	border-radius: 7px;
+}
+
+.container .progress-bar {
+	height: 100%;
+	background-color: #4008cd;
+	position: absolute;
+	animation: progress-animation 5s ease-in-out;
+	border-radius: 7px;
+}
+.loader {
+	background-color: #000;
+	position: fixed;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	z-index: 10;
+	display: flex;
+	align-items: flex-end;
+  }
+  
+  .progress-bar {
+	width: 0;
+	height: 200px;
+	background: linear-gradient(40deg, rgb(109, 63, 152) 0%,
+		rgb(176, 118, 179) 80%,
+		rgb(109, 63, 152) 145%,
+		rgb(176, 118, 179) 100%);
+	transition: 0.5s linear;
+	display: flex;
+	justify-content: flex-end;
+	transform: translateY(0);
+  }
+  
+  span.number-count {
+	font-size: 130px;
+	color: #fff;
+	padding-right: 50px;
+	font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .height-0 {
+	transform: translateY(100%);
+  }
+  
+  .hide-loader {
+	display: none;
+  }
+
+@keyframes progress-animation {
+	0% {
+		width: 0%;
+	}
+
+	100% {
+		width: 100%;
+	}
+}
+
 body {
 	line-height: 1;
 }

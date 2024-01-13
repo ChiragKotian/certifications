@@ -3,6 +3,29 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+setTimeout(() => {
+	let progressBar = document.getElementById("myProgressBar");
+  
+	let barwidth = 10;
+  
+	let ab = setInterval(progressFunction, 40);
+  
+	function progressFunction() {
+	  if (barwidth >= 100) {
+		clearInterval(ab);
+		setTimeout(() => {
+		  progressBar.classList.add("height-0");
+		}, 3000);
+		setTimeout(() => {
+		  document.getElementById("loader").classList.add("hide-loader");
+		}, 4000);
+	  } else {
+		barwidth++;
+		progressBar.style.width = barwidth + "%";
+		document.getElementById("incrementpercentage").innerHTML = barwidth + "%";
+	  }
+	}
+  }, 1000);
 
 (function($) {
 
