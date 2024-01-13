@@ -29,20 +29,7 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
-.container {
-	height: 20px;
-	background-color: #CCC;
-	position: relative;
-	border-radius: 7px;
-}
-
-.container .progress-bar {
-	height: 100%;
-	background-color: #4008cd;
-	position: absolute;
-	animation: progress-animation 5s ease-in-out;
-	border-radius: 7px;
-}
+/*progress bar start*/
 .loader {
 	background-color: #000;
 	position: fixed;
@@ -83,7 +70,7 @@ footer, header, hgroup, menu, nav, section {
 	display: none;
   }
 
-
+/*progress bar end*/
 body {
 	line-height: 1;
 }
